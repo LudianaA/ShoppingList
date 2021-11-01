@@ -14,13 +14,10 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private static final String LOG_TAG =
             MainActivity.class.getSimpleName();
-    public static final String RICE = "Rice";
-    public static final String CHEESE = "cheese";
     public static final int TEXT_REQUEST = 1;
-    private int val;
     private TextView item1,item2,item3,item4,item5,item6,item7,item8,item9,item10;
-    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10;
     private ArrayList <String> buttonList = new ArrayList<>();
+    private ArrayList <String> savedlist = new ArrayList<>();
     private ArrayList <TextView> itemList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +34,6 @@ public class MainActivity extends AppCompatActivity {
         item9 = findViewById(R.id.item9);
         item10 = findViewById(R.id.item10);
 
-        btn1 =  findViewById(R.id.cheese_button);
-        btn2 =  findViewById(R.id.rice_button);
-        btn3 =  findViewById(R.id.bread_button);
 
         itemList.add(item1);
         itemList.add(item2);
@@ -56,14 +50,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         if(savedInstanceState != null) {
-            for(int i = 0; i <buttonList.size();i++){
-                itemList.get(i).setText(buttonList.get(i));
+            savedlist = (ArrayList<String>) savedInstanceState.getSerializable("array");
+            for(int i = 0; i < savedlist.size();i++){
+               itemList.get(i).setText(savedlist.get(i));
 
-            }
-            //item1.setText(savedInstanceState.getString("reply_text"));
-            //item2.setText("hey");
+          }
 
-        }
+
+      }
     }
 
     public void launchSecondActivity(View view) {
@@ -95,11 +89,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-            outState.putString("reply_text",
-                    item1.getText().toString());
+        outState.putSerializable("array",buttonList);
+
 
     }
+
 }

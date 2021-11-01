@@ -15,8 +15,7 @@ public class SecondActivity extends AppCompatActivity {
     public static final String RICE = "Rice";
     public static final String EXTRA_REPLY =
             "com.example.android.shoppinglist.extra.REPLY";
-    public static final String EXTRA_REPLY2 =
-            "com.example.android.shoppinglist.extra.REPLY";
+
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
