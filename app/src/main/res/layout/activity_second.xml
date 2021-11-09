@@ -28,7 +28,6 @@
             android:id="@+id/cheese_button"
             android:layout_width="113dp"
             android:layout_height="45dp"
-
             android:onClick="addCheese"
             android:text="Cheese"
             android:layout_marginStart="44dp"
@@ -37,11 +36,11 @@
             tools:layout_editor_absoluteX="37dp" />
 
         <Button
-        android:id="@+id/rice_button"
-        android:layout_width="105dp"
-        android:layout_height="45dp"
-        android:onClick="addRice"
-        android:text="Rice"
+            android:id="@+id/rice_button"
+            android:layout_width="105dp"
+            android:layout_height="45dp"
+            android:onClick="addRice"
+            android:text="Rice"
             android:layout_marginStart="44dp"
             android:layout_marginTop="40dp"
             app:layout_constraintTop_toTopOf="parent"
