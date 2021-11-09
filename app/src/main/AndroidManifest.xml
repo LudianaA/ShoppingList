@@ -11,6 +11,7 @@
         android:theme="@style/Theme.ShoppingList">
         <activity android:name=".SecondActivity"
             android:label = "Shopping Items"
+
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

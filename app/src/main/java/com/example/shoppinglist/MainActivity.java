@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int TEXT_REQUEST = 1;
     private TextView item1,item2,item3,item4,item5,item6,item7,item8,item9,item10;
     private ArrayList <String> buttonList = new ArrayList<>();
-    private ArrayList <String> savedlist = new ArrayList<>();
+//    private ArrayList <String> savedlist = new ArrayList<>();
     private ArrayList <TextView> itemList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,15 +50,77 @@ public class MainActivity extends AppCompatActivity {
 
 
         if(savedInstanceState != null) {
-            savedlist = (ArrayList<String>) savedInstanceState.getSerializable("array");
-            for(int i = 0; i < savedlist.size();i++){
-               itemList.get(i).setText(savedlist.get(i));
+            buttonList = (ArrayList<String>) savedInstanceState.getSerializable("array");
+        }
 
-          }
+        for(int i = 0; i < buttonList.size();i++){
+            itemList.get(i).setText(buttonList.get(i));
 
-
-      }
+        }
     }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+        Log.d(LOG_TAG, "onStart");
+
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(LOG_TAG, "onPause");
+        for(int i = 0; i < buttonList.size();i++){
+            itemList.get(i).setText(buttonList.get(i));
+
+        }
+
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(LOG_TAG, "onRestart");
+        for(int i = 0; i < buttonList.size();i++){
+            itemList.get(i).setText(buttonList.get(i));
+
+        }
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(LOG_TAG, "onResume");
+        for(int i = 0; i < buttonList.size();i++){
+            itemList.get(i).setText(buttonList.get(i));
+
+        }
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(LOG_TAG, "onStop");
+        for(int i = 0; i < buttonList.size();i++){
+            itemList.get(i).setText(buttonList.get(i));
+
+        }
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(LOG_TAG, "onDestroy");
+        for(int i = 0; i < buttonList.size();i++){
+            itemList.get(i).setText(buttonList.get(i));
+
+        }
+
+    }
+
+
 
     public void launchSecondActivity(View view) {
         Log.d(LOG_TAG, "Button clicked!");
