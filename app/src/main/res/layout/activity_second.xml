@@ -6,124 +6,134 @@
     android:layout_height="match_parent"
     tools:context=".SecondActivity">
 
-
-
-
-    <Button
-        android:id="@+id/cheese_button"
-        android:layout_width="113dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="48dp"
-        android:onClick="addCheese"
-        android:text="Cheese"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.102" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/cheese_button"
+            android:layout_width="113dp"
+            android:layout_height="45dp"
+
+            android:onClick="addCheese"
+            android:text="Cheese"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="37dp" />
+
+        <Button
         android:id="@+id/rice_button"
         android:layout_width="105dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="48dp"
         android:onClick="addRice"
         android:text="Rice"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.102" />
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="37dp" />
 
     <Button
         android:id="@+id/bread_button"
         android:layout_width="106dp"
         android:layout_height="44dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="52dp"
         android:onClick="addBread"
         android:text="Bread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cheese_button" />
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="37dp" />
 
     <Button
         android:id="@+id/egg_button"
         android:layout_width="103dp"
         android:layout_height="48dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="52dp"
         android:onClick="addEgg"
         android:text="Egg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rice_button" />
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="37dp" />
 
     <Button
         android:id="@+id/butter_button"
         android:layout_width="110dp"
         android:layout_height="43dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="68dp"
         android:onClick="addButter"
         android:text="Butter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bread_button" />
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="37dp" />
 
     <Button
         android:id="@+id/milk_button"
         android:layout_width="100dp"
         android:layout_height="42dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="56dp"
         android:onClick="addMilk"
         android:text="Milk"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/egg_button" />
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="37dp" />
 
     <Button
         android:id="@+id/carrot_button"
         android:layout_width="113dp"
         android:layout_height="46dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="56dp"
         android:onClick="addCarrot"
         android:text="Carrot"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/butter_button"
-        app:layout_constraintVertical_bias="0.037" />
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="37dp" />
 
-    <Button
-        android:id="@+id/water_button"
-        android:layout_width="104dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="48dp"
-        android:onClick="addWater"
-        android:text="Water"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cookies_button"
-        app:layout_constraintVertical_bias="0.445" />
+        <Button
+            android:id="@+id/water_button"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="40dp"
+            android:onClick="addWater"
+            android:text="Water"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="37dp" />
 
     <Button
         android:id="@+id/grapes_button"
         android:layout_width="113dp"
         android:layout_height="42dp"
-        android:layout_marginStart="44dp"
         android:onClick="addGrape"
         android:text="Grapes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carrot_button"
-        app:layout_constraintVertical_bias="0.427" />
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="37dp" />
 
     <Button
         android:id="@+id/cookies_button"
         android:layout_width="103dp"
         android:layout_height="46dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="52dp"
         android:onClick="addCookies"
         android:text="Cookies"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/milk_button"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="37dp" />
+    </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
